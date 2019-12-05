@@ -1,0 +1,104 @@
+C:\Users\rishi.zing\source\repos\WebApplication1\WebApplication1 Sample Project Location
+docker build . -t new_app2 -f .\WebApplication1\Dockerfile .
+
+docker build -t mycoreapp -f .\InventoryManagement\Dockerfile .
+docker run -it -p 85:80 mycoreapp
+
+mongo 
+docker run -d -p 27017-27019:27017-27019 --name mongodb mongo
+
+remove container
+docker container rm cc3f2ff51cab cd20b396a061
+
+from Solution Directory run the compose Command as below:-
+docker-compose up
+
+Remove Alll Docker Iamges:-
+docker rmi -f $(docker images -q)
+
+Remove All containers:-
+docker rm -f $(docker ps -a -q)
+
+Installing Set up for Kubernetes
+https://medium.com/@JockDaRock/minikube-on-windows-10-with-hyper-v-6ef0f4dc158c
+
+Installed Choco from below link
+https://chocolatey.org/install
+
+Error:-Virtual Switch Manager
+Error applying Virtual Switch Properties changes
+Failed while adding virtual Ethernet switch connections.
+
+Resolution:-https://support.microsoft.com/en-in/help/3101106/you-cannot-create-a-hyper-v-virtual-switch-on-64-bit-versions-of-windo
+
+
+* minikube v1.5.2 on Microsoft Windows 10 Pro 10.0.17763 Build 17763
+* Creating hyperv VM (CPUs=2, Memory=2000MB, Disk=20000MB) ...
+X minikube is unable to connect to the VM: dial tcp: address fe80::215:5dff:fe01:404:22: too many colons in address
+
+This is likely due to one of two reasons:
+
+- VPN or firewall interference
+- hyperv network configuration issue
+
+Suggested workarounds:
+
+- Disable your local VPN or firewall software
+- Configure your local VPN or firewall to allow access to fe80::215:5dff:fe01:404
+- Restart or reinstall hyperv
+- Use an alternative --vm-driver
+
+Solution of Above Problems:-
+https://github.com/kubernetes/minikube/issues/4320
+
+CI/CD Official Docs
+https://www.azuredevopslabs.com/labs/vstsextend/azuredevopsprojectdotnet/
+
+
+
+Kubernate Installation Dash Board
+===================================
+https://dzone.com/articles/kubernetes-local-development-with-minikube-on-hype
+-----I have installed using above link
+
+https://learnk8s.io/blog/installing-docker-and-kubernetes-on-windows  
+-----Another link have same steps
+
+Kubernate Command
+minikube dashboard
+
+minikube dashboard — url
+
+
+Set up kubernetes with example:--
+https://learnk8s.io/blog/installing-docker-and-kubernetes-on-windows
+
+
+
+=======Push images on git hub ======
+Step 1:- first tag the image first 
+      Comand :-  docker tag inventorymanagement_app rishiapj/mytestapp:module
+Step 2:- push the code by using command
+      Command :- docker push dockerlab:test
+
+
+
+=================   Work with Kubectl Command================
+Run Command if we want to edit Deployement File
+      kubectl run inventory --image=rishiapj/mytestapp:module
+      kubectl edit pod/inventory-7d4d8bd498-dd8q4 -o yaml
+      kubectl set image deploy/inventory inventory=rishiapj/mytestapp:module
+      kubectl describe pod/inventory-5f79b785cf-swmhd
+     
+      kubectl rollout status deploy/inventory
+
+
+
+
+Get Pods details as a YAML file
+
+kubectl get pods inventory-5f79b785cf-swmhd -o yaml
+
+Question: If i did't provide replica when i create pods then what is the  default replica of these pods ?
+Question: if i did't provide replica then can i update and how ?
+
