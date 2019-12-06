@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: inventorymanagementpod
+  labels:
+    app: inventorymanagement
+spec:
+  containers:
+  - name: inventorymanagement
+    image: rishiapj/mytestapp:module
+    ports:
+      - containerPort: 80

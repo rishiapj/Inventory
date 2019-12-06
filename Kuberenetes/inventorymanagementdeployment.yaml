@@ -1,0 +1,41 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+
+kind: Deployment
+
+metadata:
+
+  name: inventorymanagementpod
+
+  labels:
+
+    app: guestbook
+
+spec:
+
+  selector:
+
+    matchLabels:
+
+      app: inventorymanagement
+
+  replicas: 3
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: inventorymanagement
+
+    spec:
+
+      containers:
+
+      - name: inventorymanagement
+
+        image: rishiapj/mytestapp:module
+
+        ports:
+
+        - containerPort: 80
