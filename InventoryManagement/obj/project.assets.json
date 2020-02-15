@@ -13587,11 +13587,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Project\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+      "projectUniqueName": "C:\\MyProject\\Inventory\\InventoryManagement\\InventoryManagement.csproj",
       "projectName": "InventoryManagement",
-      "projectPath": "C:\\Project\\InventoryManagement\\InventoryManagement\\InventoryManagement.csproj",
+      "projectPath": "C:\\MyProject\\Inventory\\InventoryManagement\\InventoryManagement.csproj",
       "packagesPath": "C:\\Users\\rishi.zing\\.nuget\\packages\\",
-      "outputPath": "C:\\Project\\InventoryManagement\\InventoryManagement\\obj\\",
+      "outputPath": "C:\\MyProject\\Inventory\\InventoryManagement\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
